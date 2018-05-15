@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tag for SEO -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="copyright" content="the Metatags Company">
+    <!-- title of the project -->
+    <title>Wealthfund</title>
+    <!-- boostrap files -->
+    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="asset/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
+    <link rel="stylesheet" href="asset/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap-datetimepicker.min.css">
+</head>
+      <style>
+         text.label {
+         fill: #9596a1;
+         font-size: 12px;
+         }
+         g.tick>text {
+         fill: #9596a1;
+         font-size: 14px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class='progress1' id="progress_div">
+         <div class='bar' id='bar1'></div>
+      </div>
+      <nav class="navbar navbar-default desktop-menu ">
+         <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 p0">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="#"><img src="asset/images/wealthfund-logo.png" class="img-responsive" alt="wealthfund-logo"/></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+               <div class="flex-property">
+                  <div class="user-photo">
+                     <img src="asset/images/profile-picture.png" class="img-responsive" alt="profile-picture"/>
+                  </div>
+                  <div class="user-detials p-10px">
+                     <h5> Anmol Milka Singh</h5>
+                     <p>LOGOUT</p>
+                  </div>
+               </div>
+            </ul>
+         </div>
+      </nav>
+      <!-- mobile menu -->
+      <nav class="navbar navbar-inverse mobile-menu">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" onclick="openNav()" class="navbar-toggle" data-toggle=" " data-target="">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand"   href="#"><img src="asset/images/wealthfund-logo.png" class="img-responsive" alt="wealthfund-logo"/></a>
+            </div>
+            <div class="sidenav" id="mySidenav">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               <div class="flex-property xs-users-bt-space">
+                  <div class="user-photo">
+                     <img src="asset/images/profile-picture.png" class="img-responsive" alt="profile-picture"/>
+                  </div>
+                  <div class="user-detials p-10px">
+                     <h5> Anmol Milka Singh</h5>
+                     <p>LOGOUT</p>
+                  </div>
+               </div>
+               <ul class="nav navbar-nav mob-view">
+                  <li class="active"><a href="#">Dashboard</a></li>
+                  <li><a href="#">Track Expenses</a></li>
+                  <li><a href="#">Accounts</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mutual Funds <span class="caret"></span></a>
+                     <ul class="dropdown-menu mobile-dropdown">
+                        <h3 class="dropown-title">Mutual Funds </h3>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <h3 class="dropown-title">Purchase</h3>
+                        <li><a href="#">Smart Portfolios</a></li>
+                        <li><a href="#">Design own Portfolio</a></li>
+                        <li><a href="#">Direct Buy</a></li>
+                        <h3 class="dropown-title">Transact</h3>
+                        <li><a href="#">Multi-Sell</a></li>
+                        <li><a href="#">STP</a></li>
+                        <li class="xs-border-line-dropdown"><a href="#">SWP</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="#">Reports</a></li>
+                  <li><a href="#">Tools</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- end -->
+      <ul class="menu container-fluid line-effet">
+         <li class="active"><a   href="javascript:void(0);">Dashboard</a></li>
+         <li><a href="javascript:void(0);">Track Expenses</a></li>
+         <li><a href="javascript:void(0);">Accounts</a></li>
+         <li  class="dropdowns rotating">
+            <a   href="javascript:void(0);">Mutual Funds <span class="down-position"><i class="fa fa-angle-down"></i></span></a> 
+            <div class="dropdown-content">
+               <div class="row bg-border">
+                  <div class="column">
+                     <h3 >Mutual Funds</h3>
+                     <a href="javascript:void(0);">Overview</a>
+                     <h3 >Reports</h3>
+                     <a href="javascript:void(0);">Orders</a>
+                  </div>
+                  <div class="column">
+                     <h3>Purchase</h3>
+                     <a href="javascript:void(0);">Smart Portfolios</a>
+                     <a href="javascript:void(0);">Design own Portfolio</a>
+                     <a href="javascript:void(0);">Direct Buy</a>
+                  </div>
+                  <div class="column">
+                     <h3>Transact</h3>
+                     <a href="javascript:void(0);">Multi-Sell</a>
+                     <a href="javascript:void(0);">STP</a>
+                     <a href="javascript:void(0);">SWP</a>
+                  </div>
+               </div>
+            </div>
+         </li>
+         <li class="rotating"><a  href="javascript:void(0);">Reports <span class="down-position"><i class="fa fa-angle-down"></i></span></a></li>
+         <li class="rotating"><a  href="javascript:void(0);">Tools <span class="down-position"><i class="fa fa-angle-down"></i></span></a></li>
+      </ul>
+      <section class="accounts m-30 container-fluid">
+         <div class="col-md-10 col-md-offset-1 no-pad-right">
+            <div class="mutual-fund-header index">
+               <div class="header-overview">
+                  <h6 class="">Switch Currency :</h6>
+                  <div class="dropdown mutual">
+                     <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Indian Rupee
+                     <i class="fa fa-angle-down"></i></button>
+                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation" class="name"><a role="menuitem" tabindex="-1" href="#">Indian Rupee</a></li>
+                        <li role="presentation" class="name"><a role="menuitem" tabindex="-1" href="#">US Dollar</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-10 col-md-offset-1 bg-border ">
+            <div class="flex-porety ">
+               <h4 class="p-30">ACCOUNTS</h4>
+               <div class="bank-details">
+                  <p class="active"><a data-toggle="tab" href="#bank">BANK</a></p>
+                  <p><a data-toggle="tab" href="#credit-card">CREDIT CARDS</a></p>
+                  <p><a data-toggle="tab" href="#loans">LOANS</a></p>
+                  <p><a data-toggle="tab" href="#investment">INVESTMENTS</a></p>
+               </div>
+            </div>
+            <!-- tab content -->
+            <div class="tab-content">
+               <!-- BANK tab -->
+               <div id="bank" class="tab-pane fade in active  bankname   ">
+                  <div class="row slick-slider tab-border p-30">
+                     <div class="sliders border-lf">
+                        <p class="rupee-bank">HDFC BANK</p>
+                        <p class="act-type">Savings</p>
+                        <p class="rupees">₹25,000</p>
+                        <p  class="rupee-amount">001234569</p>
+                     </div>
+                     <div class="sliders  border-lf">
+                        <p class="rupee-bank">ICICI BANK</p>
+                        <p class="act-type">Savings</p>
+                        <p class="rupees">₹25,000</p>
+                        <p  class="rupee-amount">001234569</p>
+                     </div>
+                     <div class="sliders  ">
+                        <p class="add-account js-add-slide"><img src="asset/images/plus-circle-o-anticon.png" class="img-responsive center-block"/></p>
+                        <p class="rupee-bank">ADD ACCOUNT</p>
+                     </div>
+                     <div class="sliders border-lf">
+                     </div>
+                     <div class="sliders border-lf">
+                     </div>
+                  </div>
+               </div>
+               <!-- end of bank tab -->
+               <!--start credit card tab -->
+               <div id="credit-card" class="tab-pane fade  ">
+                  <div class="row slick-slider1 tab-border p-30">
+                     <div class="col-md-2 col-xs-4 sliders border-lf ">
+                        <p class="rupee-bank">HDFC BANK</p>
+                        <p class="act-type">Savings</p>
+                        <p class="rupees">₹25,000</p>
+                        <p  class="rupee-amount">001234569</p>
+                     </div>
+                     <div class="col-md-10 sliders  border-lf">
+                     </div>
+                  </div>
+               </div>
+               <!-- end of credit card -->
+               <!-- investment tab -->
+               <div id="investment" class="tab-pane fade   ">
+                  <div class="row slick-slider2 tab-border  p-30">
+                     <div class="col-md-2  col-xs-4 sliders border-lf">
+                        <p class="rupee-bank">HDFC BANK</p>
+                        <p class="act-type">Savings</p>
+                        <p class="rupees">₹25,000</p>
+                        <p  class="rupee-amount">001234569</p>
+                     </div>
+                     <div class="col-md-10 sliders  border-lf">
+                     </div>
+                  </div>
+               </div>
+               <!-- end of investment tab -->
+               <!-- LOANS tab -->
+               <div id="loans" class=" tab-pane fade   ">
+                  <div class="row slick-slider3 tab-border  p-30">
+                     <div class="col-md-2 col-xs-4 sliders border-lf">
+                        <p class="rupee-bank">HDFC BANK</p>
+                        <p class="act-type">Savings</p>
+                        <p class="rupees">₹25,000</p>
+                        <p  class="rupee-amount">001234569</p>
+                     </div>
+                     <div class="col-md-2 col-xs-4 sliders border-lf">
+                        <p class="rupee-bank">HDFC BANK</p>
+                        <p class="act-type">Savings</p>
+                        <p class="rupees">₹25,000</p>
+                        <p  class="rupee-amount">001234569</p>
+                     </div>
+                     <div class="col-md-8 sliders  border-lf">
+                     </div>
+                  </div>
+               </div>
+               <!-- end of loans tab -->
+            </div>
+            <!-- tab content end process -->
+         </div>
+      </section>
+      <section class="charts">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-10 col-md-offset-1">
+                  <div class="row">
+                     <div class="col-md-6 col-sm-12 col-xs-12 ">
+                        <div class=" bg-border  m-btm-dashboard">
+                           <div class="line-boundaries ">
+                              <p class="p-30 title-charts">YOUR NET WORTH</p>
+                           </div>
+                           <div class="flow-chart-base p-top30">
+                              <div class="chart-values p-left-dashboard">
+                                 <h5>Net Worth</h5>
+                                 <p class="bg-blue">1,00,000</p>
+                              </div>
+                              <div class="chart-values p-left-dashboard">
+                                 <h5>Assets</h5>
+                                 <p class="bg-green">1,50,000</p>
+                              </div>
+                              <div class="chart-values p-left-dashboard">
+                                 <h5>Debt</h5>
+                                 <p class="bg-red">50,000</p>
+                              </div>
+                           </div>
+                           <div class="overall-30">
+                              <canvas id="myChart"  width="600" height="350"></canvas>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class=" bg-border  ">
+                           <div class="line-boundaries ">
+                              <p class="p-30 title-charts">YOUR PORTFOLIO</p>
+                           </div>
+                           <div class="chart-base p-top20">
+                              <div class="chart-values">
+                                 <h5>Current Value</h5>
+                                 <p class="bg-black"> ₹ 13,850</p>
+                              </div>
+                              <div class="chart-values">
+                                 <h5>Amount Gained</h5>
+                                 <p class="bg-black">₹ 875</p>
+                              </div>
+                              <div class="chart-values">
+                                 <h5>Days Change</h5>
+                                 <p class="bg-black">₹ 600</p>
+                              </div>
+                              <div class="chart-values">
+                                 <h5>Dividend</h5>
+                                 <p class="bg-black">₹ 900</p>
+                              </div>
+                              <div class="chart-values">
+                                 <h5>CAGR</h5>
+                                 <p class="bg-black">15%</p>
+                              </div>
+                           </div>
+                           <div class="overall-30 ">
+                              <canvas id="doughnut-chart" width="600" height="350" ></canvas>
+                              <div class="veritcal-align">
+                                 <p class="invested">Total Invested</p>
+                                 <p class="invested-value">14,725</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row m-30">
+               <div class="col-md-1"></div>
+               <div class="col-md-5 col-sm-12 col-xs-12 ">
+                  <div class=" bg-border  m-btm-dashboard">
+                     <div class="line-boundaries ">
+                        <p class="p-30 title-charts">YOUR EXPENSES  <span class="down-position"><i class="fa fa-angle-down"></i></span></p>
+                        <div class="flex">
+                           <!--<p >Select Account <span class="down-position"><i class="fa fa-angle-down"></i></span></p>-->
+                           <select class="select-box" name=" ">
+                              <option value="volvo">Select Account</option>
+                              <option value="saab">Tamil</option>
+                              <option value="opel">Ram Paul</option>
+                              <option value="audi">Rillusion</option>
+                           </select>
+                           <select class="days" name=" ">
+                              <option value="volvo">30 DAYS</option>
+                              <option value="saab">7 Days</option>
+                              <option value="opel">30 Days</option>
+                              <option value="audi">3 Months</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="overall-30 ">
+                        <div class="" id="chart">
+                           <svg></svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-5  col-sm-12 col-xs-12 ">
+                  <div class=" bg-border ">
+                     <div class="line-boundaries ">
+                        <p class="p-30 title-charts">TOP EXPENSES</p>
+                        <div class="flex">
+                           <select class="select-box" name=" ">
+                              <option value="volvo">Select Account</option>
+                              <option value="saab">Tamil</option>
+                              <option value="opel">Ram Paul</option>
+                              <option value="audi">Rillusion</option>
+                           </select>
+                           <select class="days" name=" ">
+                              <option value="volvo">30 DAYS</option>
+                              <option value="saab">7 Days</option>
+                              <option value="opel">30 Days</option>
+                              <option value="audi">3 Months</option>
+                           </select>
+                           <!--
+                              <p class="days">30 DAYS <span class="down-position"><i class="fa fa-angle-down"></i></span></p>
+                              <ul class="days-dropdown-menu">
+                                    <li><a href="#">7 Days</a></li>
+                                    <li><a href="#">30 Days</a></li>
+                                    <li><a href="#">3 Months</a></li>
+                                  </ul>
+                                -->
+                        </div>
+                     </div>
+                     <div class="overall-30">
+                        <div class="" id="charts">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-1"></div>
+         </div>
+         </div>
+      </section>
+        <!--js files -->
+        <script src="asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="asset/js/bootstrap.min.js" type="text/javascript" ></script>
+        <script src="asset/js/jquery.min.js"></script>
+        <script src="asset/js/Chart.min.js"></script>
+        <script src="asset/js/slick.js" type="text/javascript" ></script>
+        <script src="asset/js/d3.v3.min.js"></script>
+        <script src="asset/js/d3.tip.v0.6.3.js"></script>
+        <script>
+    $(document).ready(function () {
+        $('.slick-slider').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            dots: false,
+            speed: 800,
+            autoplay: false,
+            loop: false,
+            arrows: true,
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+
+    });
+</script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+  // The type of chart we want to create
+  type: 'line',
+
+  // The data for our dataset
+  data: {
+
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", ],
+    datasets: [{
+      label: "March",
+      backgroundColor: 'rgba(82,41,186,0.1)',
+
+      borderColor: "#5229ba",
+      data: [1000, 900, 1300, 1200, 2400, 1900, 2000, 1260, 3800, 3000, 2000, 900, 2700, 2000, 1200, 1240],
+      pointRadius: 0,
+      pointBorderColor: 'rgba(82,41,186,0.4)',
+      pointBackgroundColor: '#5229ba',
+      pointHoverRadius: 4,
+      pointBorderWidth: 8,
+      borderWidth: 2,
+
+
+    }]
+  },
+
+  // Configuration options go here
+  options: {
+
+
+    layout: {
+      padding: {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0
+      }
+    },
+
+    responsive: true,
+
+    legend: {
+      display: false,
+
+      labels: {
+        fontColor: '#9596a1',
+        fontSize: 16,
+        fontFamily: 'Work Sans',
+
+        boxWidth: 30,
+        boxHeight: 2,
+
+
+      }
+
+    },
+    scales: {
+      yAxes: [{
+        stacked: true,
+
+        ticks: {
+
+          fontSize: 12,
+          fontColor: '#9596a1',
+        }
+      }],
+
+      xAxes: [{
+        ticks: {
+          fontSize: 12,
+          fontColor: '#9596a1',
+          fontfamily: 'Work Sans',
+
+        },
+        gridLines: {
+          display: false,
+
+
+        }
+      }]
+    },
+    tooltips: {
+      mode: 'x-axis',
+      intersect: false,
+    },
+    hover: {
+      mode: 'x-axis',
+      intersect: true
+    }
+
+  },
+
+
+});
+
+
+new Chart(document.getElementById("doughnut-chart"), {
+  type: 'doughnut',
+  data: {
+    labels: [
+      "Equity (₹13,145)",
+      "Gold (₹1490)",
+      "Debt (₹2,760)"
+    ],
+    datasets: [{
+      label: "",
+      backgroundColor: ["#5229ba", "#f2a931", "#ff2c7f"],
+      data: [300, 100, 100],
+    }]
+  },
+  options: {
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        fontColor: '#9596a1',
+        fontSize: 16,
+        fontFamily: 'Work Sans',
+        padding: 20,
+        boxWidth: 30,
+        boxHeight: 2,
+
+
+      }
+    },
+    responsive: true,
+
+    title: {
+      display: false,
+      text: 'Predicted world population (millions) in 2050'
+    }
+  }
+});
+</script>
+
+<script>
+$(document).ready(function () {
+  $(".rotating a").hover(function () {
+
+    $(this).find("span.down-position i").addClass("arrow-up");
+
+  }, function () {
+    $(this).find("span.down-position i").removeClass("arrow-up");
+
+  });
+  $("p.days").click(function () {
+
+    $(this).siblings("ul.days-dropdown-menu").fadeToggle("shown");
+
+    $(this).find("span.down-position i").toggleClass("arrow-up");
+
+  });
+
+
+  $("p.select-box").click(function () {
+
+    $(this).siblings("ul.acountname-dropdown-menu").fadeToggle("shown");
+    $(this).find("span.down-position i").toggleClass("arrow-up");
+
+
+  });
+  $(".bank-details p").click(function () {
+    $(".bank-details p").removeClass("active");
+
+    $(this).addClass("active");
+  });
+
+
+  $('.dropdown-menu li.name').click(function () {
+    $('#menu1').text($(this).text()).append('<i class="fa fa-angle-down"></i>');
+  });
+
+});
+document.onreadystatechange = function (e) {
+  if (document.readyState == "interactive") {
+    var all = document.getElementsByTagName("*"),
+      max = all.length,
+      step = 100 / max,
+      progress = step;
+
+    for (var i = 0; i++ < max; progress += step) {
+      pageProgress(progress, all[i]);
+    }
+  }
+};
+
+function pageProgress(step, el) {
+  if ($(el).on()) {
+    $("#bar1").animate({
+      width: step + "%"
+    }, 10, function () {
+      if (document.querySelector("#bar1").style.width.slice(0, -1) >= 99.5) {
+        $(".progress1").fadeOut("slow");
+      }
+    });
+  } else {
+    setTimeout(pageProgress(step, el), 5000);
+  }
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+
+}            
+</script>
+   
+
+<script type="application/json" id="data">
+[
+  {
+    "letter":"Jan",
+    "frequency":5000
+  },
+  {
+    "letter":"Feb",
+    "frequency":10000
+  },
+  {
+    "letter":"Mar",
+    "frequency":10000
+  },
+  {
+    "letter":"Apr",
+    "frequency":5000
+  },
+  {
+    "letter":"May",
+    "frequency":10000
+  },
+  {
+    "letter":"Jun",
+    "frequency":12000
+  },
+  {
+    "letter":"Jul",
+    "frequency":3500
+  },
+  {
+    "letter":"Aug",
+    "frequency":4000
+  },
+  {
+    "letter":"Sep",
+    "frequency":9000
+  },
+  {
+    "letter":"Oct",
+    "frequency":5858
+  },
+  {
+    "letter":"Nov",
+    "frequency":4152
+  },
+  {
+    "letter":"Dec",
+    "frequency":8585
+  }
+  
+]
+</script>
+<script> 
+$(document).ready(function () {
+
+  var margin = {
+      top: 40,
+      right: 20,
+      bottom: 30,
+      left: 40
+    },
+    width = 450 - margin.left - margin.right,
+    height = 350 - margin.top - margin.bottom;
+
+  var formatPercent = d3.format(" ");
+
+  var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+  var y = d3.scale.linear()
+    .range([height, 0]);
+
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickSize(-400)
+    .tickFormat(formatPercent);
+
+  var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([+10, 0])
+    .html(function (d) {
+      return "<strong>" + d.letter + "</strong> <b><span style='color:#fff'>" + d.frequency + "</span></b>";
+    })
+
+
+  svg = d3.select('#chart svg')
+    .attr('viewBox', '0 0 ' + (width + margin.left + margin.right) + ' ' + (height + margin.top + margin.bottom))
+    .attr('height', (height + 'px'))
+    .attr('width', '100%')
+    .attr('preserveAspectRatio', 'none')
+    .append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+
+  svg.call(tip);
+
+  var data = JSON.parse(document.getElementById('data').innerHTML);
+
+  //d3.tsv("data.tsv", type, function(error, data) {
+  x.domain(data.map(function (d) {
+    return d.letter;
+  }));
+  y.domain([0, d3.max(data, function (d) {
+    return d.frequency;
+  })]);
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis)
+    .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 6)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+
+
+  svg.selectAll(".bar1")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar1")
+    .attr("x", function (d) {
+      return x(d.letter);
+    })
+    .attr("width", x.rangeBand())
+    .attr("y", function (d) {
+      return y(d.frequency);
+    })
+    .attr("height", function (d) {
+      return height - y(d.frequency);
+    })
+    .on('mouseover', tip.show)
+    .on('mouseout', tip.hide)
+
+  //});
+
+  function type(d) {
+    d.frequency = +d.frequency;
+    return d;
+  }
+
+
+  // TOP EXPENSES//////////////////////////////////////
+
+
+});
+</script>
+
+ 
+<script>
+
+    data = [
+        {label:"Hospital", value:19},
+        {label:"Travel", value:5},
+        {label:"Food", value:13},
+        {label:"Shopping", value:17}
+       
+    ];
+
+
+    
+
+    var axisMargin = 10,
+            margin = 10,
+            valueMargin = 10,
+            width = parseInt(d3.select('#charts').style('width'), 10),
+            height = parseInt(d3.select('#charts').style('height'), 10),
+            barHeight = (height-axisMargin-margin*2)* 0.4/data.length,
+            barPadding = (height-axisMargin-margin*2)*0.6/data.length,
+            data, bar, svg, scale, xAxis, labelWidth = 0;
+
+    max = d3.max(data, function(d) { return d.value; });
+
+    svg = d3.select('#charts')
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+
+    bar = svg.selectAll("g")
+            .data(data)
+            .enter()
+            .append("g");
+
+    bar.attr("class", "bar")
+            .attr("class", "bar22")
+            .attr("cx",0)
+            .attr("transform", function(d, i) {
+                return "translate(" + margin + "," + (i * (barHeight + barPadding) + barPadding) + ")";
+            });
+
+    bar.append("text")
+            .attr("class", "label")
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em") //vertical align middle
+            .text(function(d){
+                return d.label;
+            }).each(function() {
+        labelWidth = Math.ceil(Math.max(labelWidth, this.getBBox().width));
+    });
+
+    scale = d3.scale.linear()
+            .domain([0, max])
+            .range([0, width - margin*2 - labelWidth]);
+
+    xAxis = d3.svg.axis()
+            .scale(scale)
+            .tickSize(-height + 2*margin + axisMargin + 40)
+            .orient("bottom");
+
+    bar.append("rect")
+            .attr("transform", "translate("+labelWidth+", 0)")
+            .attr("height", barHeight)
+            .attr("width", function(d){
+                return scale(d.value);
+            });
+
+
+    svg.insert("g",":first-child")
+            .attr("class", "axisHorizontal")
+            .attr("transform", "translate(" + (margin + labelWidth) + ","+ (height - axisMargin - margin)+")")
+            .call(xAxis);
+
+</script>
+
+</body>
+</html>
